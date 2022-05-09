@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Automated Online Examination Proctoring
+{% endblock %}
+
+{% block content %}
+    <div class="wrapper">
+        <div class="about">
+            <div id="about-desc">
+                <label for="about-desc" style="display:block">ABOUT</label>
+                <br><br>
+                Our Automated Online Examination Proctoring tool seeks the help of AI to classify candidate malpractices and promote a fair exam environment
+                <br>
+                Real time motion, audio and gestures are evaluated for precise classifications
+                <br><br>
+                Login/Register as a Student or a Teacher. 
+            </div>
+            <img id="video" src="{{url_for('static',filename='video-call.png')}}"></img>
+        </div>
+    </div>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&family=Niconne&family=Recursive:wght@400;900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Recursive, sans-serif;  
+        }
+        .wrapper
+        {
+            padding: 20px;
+            margin:20px;
+            display: flex;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        span
+        {
+            width:400px;
+        }
+        #video{
+            width:40%;
+            height: auto;
+            float:right;
+        }
+        #video:hover
+        {
+            opacity: 80%;
+        }
+        #about-desc
+        {
+            display: inline-block;
+            width:50%;
+            height: 100%;
+            text-align: center;
+            font-size: 25px;
+            background: linear-gradient(to top, blue, aqua,white);
+            padding-top: 30px;
+        }
+        label[for="about-desc"]
+        {
+            font-size: 35px;
+            font-weight: bold;
+        }
+    </style>
+{% endblock %}
